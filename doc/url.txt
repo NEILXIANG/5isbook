@@ -1,0 +1,67 @@
+前台：
+	首页：www.5isbook.com/5isbook/index
+	分类:www.5isbook.com/5isbook/category?id=xxx
+	详细商品页：www.5isbook.com/5isbook/detail?id="xxx"
+	注册：www.5isbook.com/5isbook/pass/register
+	
+	个人中心首页（个人订单页,已经完成的或者未完成的全部订单）：www.5isbook.com/5isbook/user/index -> www.5isbook.com/5isbook/user/order
+	查看已经关闭了的订单:www.5isbook.com/5isbook/user/order?req=all|process|done|
+	查看具体项：www.5isbook.com/5isbook/user/orderview?id="xxx"
+	取消订单：www.5isbook.com/5isbook/user/ordercancel?id="xxx"
+	管理个人地址首页：www.5isbook.com/5isbook/user/address
+	增加个人地址:www.5isbook.com/5isbook/user/adderss/add
+	删除某个地址:www.5isbook.com/5isbook/user/address/delete?id="xxx"
+	修改某个地址:www.5isbook.com/5isbook/user/address/modify?id="xxx"
+	修改个人密码:www.5isbook.com/5isbook/user/info/changePassword
+	个人资料:www.5isbook.com/5isbook/user/info/nomalinfo.action
+	
+	购物车首页：www.5isbook.com/5isbook/cart
+	增加一件商品到购物车：www.5isbook.com/5isbook/cart/add?goods_id="xxx"&goods_type="xxx"
+	删除购物车里的一项:www.5isbook.com/5isbook/cart/delete?id="xxx"
+	购物车项数量在增加：www.5isbook.com/5isbook/cart/increse?id="xxx"
+	清空购物车：www.5isbook.com/5isbook/cart/clear
+	结算页(填写订单信息)：www.5isbook.com/5isbook/cart/checkout
+	产生订单：www.5isbook.com/5isbook/cart/buy
+	
+后台:
+	首页:www.5isbook.com/5isbook/admin/index
+	\
+	\
+	
+	普通用户页：www.5isbook.com/5isbook/admin/user
+	用户详细信息:www.5isbook.com/5isbook/admin/userview?id="xxx"
+	使能普通用户:www.5isbook.com/5isbook/admin/userenable?id="xxx"
+	管理员：www.5isbook.com/5isbook/admin/administractor
+	\
+	\
+	
+	商品首页:www.5isbook.com/5isbook/admin/goods/index
+	\
+	\
+	\
+	
+	订单首页:www.5isbook.com/5isbook/admin/order/index
+	\
+	\
+	\
+
+登录：www.5isbook.com/5isbook/pass/login.jsp
+异常页面：www.5isbook.com/5isbook/pass/error.jsp
+基础项：
+1.熟练掌握java基础，熟悉主流web2.0编程技术。
+加分项：
+1.掌握一门或多门常用的脚本语言，比如：python/shell/js等。
+2.熟悉常见java设计模式，喜欢专研java底层结构。
+3.熟悉linux常用命令，数据库[mysql]，正则表达式。
+4.了解ssh，acegi，play等开源框架。
+5.了解tcp/ip网络协议。
+6.了解html/css/js/jQuery。
+看过以下书籍者更佳：
+1.HeadFirst 设计模式
+2.java编程思想
+3.深入了解jvm【周志明】
+
+1.熟悉 objective-c 语言，有ios开发经验者优先
+2.具备良好的学习能力和独立分析解决问题能力 
+3.有良好的代码习惯，结构清晰，命名规范
+4.熟悉网络通讯HTTP、Socket更佳；
