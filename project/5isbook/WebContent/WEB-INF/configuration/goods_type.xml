@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<type name="authorised_edition" display_name="正版" discount="0.8" sto_code="Z"></type>
+	<type name="pirate_edition" display_name="盗版" discount="0.5" sto_code="D"></type>
+	<type name="copy_edition" display_name="复印" discount="0.3" sto_code="F"></type>
+</config>

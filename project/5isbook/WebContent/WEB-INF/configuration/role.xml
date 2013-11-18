@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<role name="ROLE_USER" description="普通用户"/>
+	<role name="ROLE_ADMIN" description="管理员"/>
+	<role name="ROLE_SUPER_ADMIN" description="超级管理员"/>
+</config>

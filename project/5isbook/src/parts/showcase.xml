@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!-- 展示方案 --> 
+	<package name="/" namespace="/" extends="defaultPackage">
+	
+	<default-action-ref name="index"/>
+	
+	<!-- 首页 -->
+	<action name="index" class="com.wisbook.action.showcase.indexAction">
+		<result name="success">/showcase/index.jsp</result>
+	</action>
+	
+	<!-- 展示图书信息 -->
+	<action name="detail" class="com.wisbook.action.showcase.detailAction">
+		<result name="error">/error/error.jsp</result>
+		<result name="success">/showcase/bookDetail.jsp</result>
+	</action>
+	<!-- 展示分类下面的所有图书信息 -->
+	<action name="category" class="com.wisbook.action.showcase.categoryAction">
+		<result name="error">/error/error.jsp</result>
+		<result name="success">/showcase/showCategory.jsp</result>
+	</action>	
+	<!-- 搜索 -->
+	<action name="search" class="com.wisbook.action.showcase.searchAction">
+		<result name="success">/showcase/searchResult.jsp</result>
+	</action>	
+	</package> 
+</struts>
+	

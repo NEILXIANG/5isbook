@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<node display_name="图书">
+		<node display_name="自然科学">
+			<node display_name="计算机网络">
+				<node display_name="多媒体与网页开发">
+					<node display_name="计算机图形学" />
+					<node display_name="计算机多媒体" />
+					<node display_name="平面设计" />
+					<node display_name="网页设计" />
+					<node display_name="课件制作" />
+					<node display_name="网站建立与管理" />
+					<node display_name="网页制作工具" />
+				</node>
+				<node display_name="编程开发">
+					<node display_name="编译原理与工具" />
+					<node display_name="算法与数据结构" />
+					<node display_name="语言与开发工具" />
+					<node display_name="web开发" />
+					<node display_name="游戏开发" />
+				</node>
+				<node display_name="计算机理论">
+					<node display_name="计算机基础理论" />
+					<node display_name="计算机结构、设计与制造" />
+					<node display_name="计算机数学" />
+				</node>
+				<node display_name="数据库">
+					<node display_name="数据库理论" />
+					<node display_name="数据库类型" />
+					<node display_name="数据仓库、数据挖掘" />
+					<node display_name="数据库设计与管理" />
+					<node display_name="工具" />
+					<node display_name="SQL语言" />
+				</node>
+				<node display_name="软件工程">
+					<node display_name="软件工程理论" />
+					<node display_name="需求分析" />
+					<node display_name="软件方法" />
+					<node display_name="软件过程" />
+					<node display_name="面向对象" />
+					<node display_name="软件架构" />
+					<node display_name="UML" />
+					<node display_name="CMM" />
+					<node display_name="质量测试维护" />
+				</node>
+				<node display_name="操作系统">
+					<node display_name="操作系统理论" />
+					<node display_name="Microsoft Windows" />
+					<node display_name="linux/unix" />
+					<node display_name="max os" />
+					<node display_name="DOS" />
+					<node display_name="移动终端" />
+				</node>
+				<node display_name="网络通讯">
+					<node display_name="计算机网络理论" />
+					<node display_name="网络组建" />
+					<node display_name="网络协议" />
+					<node display_name="WebServer" />
+				</node>
+				<node display_name="搜索与管理">
+					<node display_name="网络管理" />
+					<node display_name="搜索引擎" />
+				</node>
+				<node display_name="安全加密">
+					<node display_name="计算机设备安全" />
+					<node display_name="计算机数据安全" />
+					<node display_name="计算机网络安全" />
+					<node display_name="计算机病毒" />
+					<node display_name="加密与解密" />
+				</node>
+			</node>
+			<node display_name="科技工程">
+				<node display_name="电子通讯">
+					<node display_name="电子科技与技术" />
+					<node display_name="电力工程" />
+					<node display_name="电气工程 " />
+					<node display_name="信息技术" />
+				</node>
+				<node display_name="农林牧渔">
+					<node display_name="农林学" />
+					<node display_name="茶草学" />
+					<node display_name="园艺" />
+					<node display_name="生物工程" />
+					<node display_name="生物技术" />
+				</node>
+				<node display_name="土木工程">
+					<node display_name="土木" />
+					<node display_name="建筑" />
+				</node>
+				<node display_name="化学工业">
+					<node display_name="有机化学" />
+					<node display_name="无机化学" />
+					<node display_name="加工化学" />
+				</node>
+				<node display_name="材料工程">
+					<node display_name="金属材料" />
+					<node display_name="无机非金属材料" />
+					<node display_name="高分子材料" />
+					<node display_name="电子信息材料" />
+				</node>
+				<node display_name="动力能源">
+					<node display_name="热能工程" />
+					<node display_name="热力发动机" />
+					<node display_name="流体机械及工程" />
+					<node display_name="空调与制冷" />
+				</node>
+				<node display_name="环境工程">
+					<node display_name="污染防治" />
+					<node display_name="环境技术" />
+				</node>
+			</node>
+			<node display_name="医学卫生"><!-- me -->
+				<node display_name="基础医学">
+					<node display_name="病理学" />
+					<node display_name="生物学" />
+					<node display_name="生理学" />
+					<node display_name="免疫学" />
+					<node display_name="微生物学" />
+					<node display_name="寄生虫学" />
+					<node display_name="解剖学" />
+					<node display_name="组织学" />
+					<node display_name="胚胎学" />
+				</node>
+				<node display_name="药学">
+					<node display_name="中药" />
+					<node display_name="西药" />
+					<node display_name="医学理论" />
+					<node display_name="医学工具书" />
+				</node>
+				<node display_name="中医学">
+					<node display_name="中医临床" />
+					<node display_name="基础理论" />
+					<node display_name="针灸" />
+					<node display_name="中西医结合" />
+					<node display_name="推拿、按摩" />
+					<node display_name="拔罐、刮痧" />
+					<node display_name="中医经典古籍" />
+				</node>
+				<node display_name="护理学">
+					<node display_name="中医" />
+					<node display_name="医学/药物教材" />
+					<node display_name="药学" />
+					<node display_name="其他临床医学" />
+					<node display_name="内科学" />
+					<node display_name="医技学" />
+					<node display_name="基础医学" />
+				</node>
+				<node display_name="临床医学">
+					<node display_name="临床医学理论" />
+					<node display_name="肿瘤学" />
+					<node display_name="精神病、心理学病" />
+					<node display_name="口腔科学" />
+					<node display_name="眼科学" />
+					<node display_name="皮肤学" />
+					<node display_name="耳鼻咽喉科学" />
+					<node display_name="特种医学" />
+					<node display_name="麻醉学" />
+					<node display_name="性病科" />
+				</node>
+			</node>
+		</node>
+		<node display_name="社会科学">
+			<node display_name="管理">
+				<node display_name="企业管理">
+					<node display_name="人力资源管理"></node>
+					<node display_name="市场营销"></node>
+					<node display_name="战略管理"></node>
+					<node display_name="企业文化"></node>
+					<node display_name="财务管理"></node>
+					<node display_name="工商管理"></node>
+					<node display_name="会计学"></node>
+					<node display_name="技术经济及管理"></node>
+				</node>
+				<node display_name="公共管理">
+					<node display_name="公共事业管理"></node>
+					<node display_name="行政管理"></node>
+					<node display_name="教育经济与管理"></node>
+					<node display_name="社会医学与卫生事业管理"></node>
+					<node display_name="土地资源管理"></node>
+					<node display_name="社会保障"></node>
+				</node>
+				<node display_name="农业经济管理">
+					<node display_name="农业经济管理"></node>
+					<node display_name="旅游管理"></node>
+					<node display_name="林业经济管理"></node>
+				</node>
+				<node display_name="图书馆与情报_档案管理">
+					<node display_name="图书馆学"></node>
+					<node display_name="档案学"></node>
+					<node display_name="情报学"></node>
+				</node>
+			</node>
+			<node display_name="经济金融">
+				<node display_name="世界经济">
+					<node display_name="国际贸易"></node>
+					<node display_name="国际金融"></node>
+					<node display_name="西方经济学"></node>
+					<node display_name="世界经济"></node>
+				</node>
+				<node display_name="货币学">
+					<node display_name="投资理财"></node>
+					<node display_name="财经税收"></node>
+					<node display_name="金融与货币"></node>
+				</node>
+				<node display_name="经济学">
+					<node display_name="会计"></node>
+					<node display_name="经济史"></node>
+					<node display_name="中国经济"></node>
+					<node display_name="审计"></node>
+					<node display_name="经济学理论"></node>
+					<node display_name="保险"></node>
+				</node>
+			</node>
+			<node display_name="法律">
+				<node display_name="民事与行政">
+					<node display_name="民法"></node>
+					<node display_name="刑法"></node>
+					<node display_name="犯罪学"></node>
+					<node display_name="行政法"></node>
+					<node display_name="诉讼法"></node>
+				</node>
+				<node display_name="国际">
+					<node display_name="国际法"></node>
+					<node display_name="外国法律与港澳台法律"></node>
+				</node>
+				<node display_name="商法">
+					<node display_name="经济法"></node>
+				</node>
+				<node display_name="法学理论">
+					<node display_name="法学史"></node>
+					<node display_name="法理学"></node>
+					<node display_name="法律法规"></node>
+				</node>
+			</node>
+			<node display_name="社会">
+				<node display_name="教育">
+					<node display_name="语言文字"></node>
+					<node display_name="教育"></node>
+					<node display_name="信息与知识传播"></node>
+				</node>
+				<node display_name="社会学">
+					<node display_name="公共关系"></node>
+					<node display_name="社会学"></node>
+					<node display_name="社会保障"></node>
+					<node display_name="社会科学总论"></node>
+					<node display_name="统计学"></node>
+				</node>
+				<node display_name="人类学">
+					<node display_name="文化人类学"></node>
+					<node display_name="民族学"></node>
+					<node display_name="心理学"></node>
+					<node display_name="人口学"></node>
+				</node>
+			</node>
+		</node>
+		<node display_name="文学">
+			<node display_name="语言学习">
+				<node display_name="专业英语">
+					<node display_name="商务英语" />
+					<node display_name="经贸英语" />
+					<node display_name="金融英语" />
+					<node display_name="求职面试英语" />
+					<node display_name="旅游业英语" />
+					<node display_name="服务业英语" />
+					<node display_name="办公室英语" />
+					<node display_name="医疗英语" />
+					<node display_name="科技英语" />
+					<node display_name="法律英语" />
+					<node display_name="计算机英语" />
+					<node display_name="新闻英语" />
+					<node display_name="其他工种英语" />
+				</node>
+				<node display_name="英语考试">
+					<node display_name="大学英语四级" />
+					<node display_name="大学英语六级" />
+					<node display_name="专业英语四级" />
+					<node display_name="专业英语八级" />
+					<node display_name="研究生入学考试" />
+					<node display_name="雅思" />
+					<node display_name="托福" />
+					<node display_name="托业" />
+					<node display_name="MBA" />
+					<node display_name="GMAT" />
+					<node display_name="SAT" />
+					<node display_name="GCT" />
+					<node display_name="全国公共英语等级考试" />
+					<node display_name="高校英语应用能力考试" />
+					<node display_name="剑桥商业英语考试" />
+					<node display_name="翻译考试" />
+					<node display_name="职称考试" />
+					<node display_name="专升本考试" />
+					<node display_name="博士入学考试" />
+				</node>
+				<node display_name="英语语法">
+					<node display_name="口语" />
+					<node display_name="听力" />
+					<node display_name="词汇" />
+					<node display_name="语法" />
+					<node display_name="阅读" />
+					<node display_name="写作" />
+					<node display_name="翻译" />
+					<node display_name="语音" />
+					<node display_name="短句、谚语" />
+					<node display_name="方法、技巧" />
+					<node display_name="英语书法字帖" />
+				</node>
+				<node display_name="其他语种语法">
+					<node display_name="口语" />
+					<node display_name="听力" />
+					<node display_name="词汇" />
+					<node display_name="语法" />
+					<node display_name="阅读" />
+					<node display_name="写作" />
+					<node display_name="翻译" />
+					<node display_name="语音" />
+					<node display_name="考试" />
+					<node display_name="实用类" />
+				</node>
+			</node><!-- 师兄 done -->
+			<node display_name="艺术"><!-- 玉英 done -->
+				<node display_name="音乐">
+					<node display_name="音乐表演" />
+					<node display_name="舞台音乐剧" />
+					<node display_name="音乐编导与创作" />
+				</node>
+				<node display_name="服装设计">
+					<node display_name="中国服装史" />
+					<node display_name="西方服装史" />
+					<node display_name="西方服装史" />
+					<node display_name="服装设计结构" />
+					<node display_name="服装画技法" />
+					<node display_name="中西服装发展史" />
+					<node display_name="成衣工艺学" />
+				</node>
+				<node display_name="多媒体网页设计">
+					<node display_name="Photoshop图形图像处理" />
+					<node display_name="Flash cs4 多媒体教学经典教材" />
+					<node display_name="数字图像处理技术" />
+					<node display_name="遥感数字图像处理" />
+				</node>
+				<node display_name="建筑与环境设计">
+					<node display_name="建筑制图" />
+					<node display_name="幼儿园建筑设计" />
+					<node display_name="景观建筑 手绘效果图表现技法" />
+					<node display_name="公共建筑设计原理" />
+					<node display_name="图解思考-建筑表现技法（第三版）" />
+					<node display_name="建筑、形式空间与秩序" />
+					<node display_name="建筑结构选型" />
+					<node display_name="建筑构造（下册）" />
+					<node display_name="外国建筑史" />
+					<node display_name="室内环境设计——理论与入门方法" />
+				</node>
+				<node display_name="戏剧影视文学">
+					<node display_name="电视摄像" />
+					<node display_name="摄影基础" />
+					<node display_name="电视画面编辑" />
+					<node display_name="当代电影艺术导论" />
+					<node display_name="外国电影史" />
+					<node display_name="三维动画设计与制作" />
+					<node display_name="现代动画概论" />
+					<node display_name="摄影" />
+				</node>
+				<node display_name="园林工程设计">
+					<node display_name="实用园林绘画技法" />
+					<node display_name="园林工程" />
+					<node display_name="园林规划设计" />
+					<node display_name="城市公园景观设计" />
+					<node display_name="城市绿地系统规划" />
+					<node display_name="景观设计" />
+					<node display_name="园林花卉学" />
+					<node display_name="园林树木学" />
+					<node display_name="园林计算机辅助设计" />
+					<node display_name="草坪学" />
+				</node>
+			</node>
+		</node>
+		<node display_name="工具">
+			<node display_name="工具书">
+				<node display_name="研究生入学考试" />
+				<node display_name="自学考试" />
+				<node display_name="汉语考试" />
+				<node display_name="法律考试" />
+				<node display_name="计算机考试" />
+				<node display_name="公务员考试" />
+				<node display_name="医学类考试" />
+				<node display_name="艺术类考试" />
+				<node display_name="资格-职称考试" />
+				<node display_name="字典" />
+			</node>
+		</node>
+	</node>
+</config>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 关闭/启用struts主题 -->
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.locale" value="utf-8"/>
+	<constant name="struts.i18n.encoding" value="utf-8"/>
+	<!-- 允许静态调用 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+<!-- 	<constant name="struts.devMode" value="true" /> -->
+	
+	<package name="defaultPackage" abstract="true" extends="struts-default">
+		<global-results> 
+			<result name="uncaughtExceptionResult">/error/error.jsp</result>
+			<result name="error">/error/error.jsp</result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping result="uncaughtExceptionResult"
+				exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+	</package>
+
+	<include file="parts/user.xml"></include>
+	<include file="parts/admin.xml"></include>
+	<include file="parts/pass.xml"></include>
+	<include file="parts/showcase.xml"></include>
+	<include file="parts/cart.xml"></include>
+	<include file="parts/confige.xml"></include>
+	
+</struts>
+	

@@ -1,0 +1,314 @@
+package com.wisbook.service.goods.manager;
+
+import java.lang.reflect.Field;   
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.Set;
+
+import javax.annotation.Resource;
+
+import com.wisbook.dao.base.BaseDao;
+import com.wisbook.dao.cms.AttributeDao;
+import com.wisbook.dao.cms.EntityDao;
+import com.wisbook.dao.order.EntityTypeDao;
+import com.wisbook.model.cms.Attribute;
+import com.wisbook.model.cms.Category;
+import com.wisbook.model.cms.Document;
+import com.wisbook.model.cms.Entity;
+import com.wisbook.model.cms.EntityValue;
+import com.wisbook.model.order.EntityType;
+import com.wisbook.model.order.EntityTypePK;
+import com.wisbook.service.goods.detail.GoodsDetail;
+import com.wisbook.service.goods.detail.GoodsDetailProvider;
+import com.wisbook.service.goods.document.DocumentManager;
+import com.wisbook.service.user.AccessErrorException;
+import com.wisbook.util.PageBean;
+
+/**
+ * 抽象manager，提供对document的支持
+ * 
+ * @author volador
+ * 
+ */
+public  abstract  class AbstractManager implements GoodsManager {
+	private DocumentManager documentManager;
+	private BaseDao<Entity, Integer> entityDao;
+	private BaseDao<EntityValue, Integer> entityValueDao;
+	private BaseDao<EntityType,EntityTypePK> entityTypeDao;
+	private AttributeDao attributeDao;
+	
+	@Resource(name="attributeDao")
+	public void setAttributeDao(AttributeDao attributeDao) {
+		this.attributeDao = attributeDao;
+	}
+
+	@Resource(name="entityTypeDao")
+	public void setEntityTypeDao(BaseDao<EntityType, EntityTypePK> entityTypeDao) {
+		this.entityTypeDao = entityTypeDao;
+	}
+	public EntityTypeDao getEntityTypeDao(){
+		return (EntityTypeDao) entityTypeDao;
+	}
+
+	@Resource(name = "entityValueDao")
+	public void setEntityValueDao(BaseDao<EntityValue, Integer> entityValueDao) {
+		this.entityValueDao = entityValueDao;
+	}
+
+	public BaseDao<Entity, Integer> getEntityDao() {
+		return entityDao;
+	}
+
+	@Resource(name = "entityDao")
+	public void setEntityDao(BaseDao<Entity, Integer> entityDao) {
+		this.entityDao = entityDao;
+	}
+
+	@Resource(name = "documentManager")
+	public void setDocumentManager(DocumentManager documentManager) {
+		this.documentManager = documentManager;
+	}
+
+	protected Document getDocument() {
+		return this.documentManager.getGoodsDocumentByName(getDocumentName());
+	}
+
+	/*
+	 * 该manager所关注的document
+	 */
+	protected abstract String getDocumentName();
+
+	@Override
+	public AddResult addGoods(GoodsDetailProvider provider){ //注意，value:StoreInfo对象
+		List<GoodsDetail> goods = provider.getGoodsDetails();
+		AddResultImpl result = new AddResultImpl();
+		Map<String,StoreInfo> storeInfos = storeProcess(goods);
+		if(provider.hasExistedRecord()){
+			storeInfos.putAll(provider.getExistedRecord());
+		}
+		result.setStoreInfo(storeInfos);
+		if(provider.hasError()){
+			result.setErrorContents(provider.getErrorContent());
+			result.setErrorMessages(provider.getErrorMessage());
+		}
+		return result;
+	}
+
+	/**
+	 * 每种商品有自己的存储方式，把这些方式留给子类来完成<br>
+	 * 期间注意图片的存储
+	 * 
+	 * @param goods
+	 * @return Map 添加商品时返回的信息
+	 */
+	protected abstract Map<String,StoreInfo> storeProcess(List<GoodsDetail> goods);
+
+	@Override
+	public int checkStoreCount(int entityId) {
+		int count = 0;
+		Entity entity = this.entityDao.getEnitytById(entityId);
+		if (entity != null)
+			for(EntityType et:entity.getEntityTypes()){
+				count +=et.getStorageCount();
+			}
+		return count;
+	}
+	
+	@Override
+	public PageBean<Entity> fetchGoodsByAttribute(String attrName,String content, int pageIndex, int pageSize,boolean byRegexp) throws NoSuchAttributeException{
+		Attribute attr = this.attributeDao.getEntityByName(this.getDocument().getId(),attrName);
+		if(attr == null) throw new NoSuchAttributeException("can not find out any attribute record name : "+attrName+"");
+		String rawName = attr.getRaw().getName();
+		String preName = rawName.substring(0,1).toUpperCase()+rawName.substring(1);
+		String targetEntityValueClazzName = preName +"EntityValue";
+		StringBuilder sb = new StringBuilder("from ");
+		sb.append(targetEntityValueClazzName);
+		sb.append(" ev where ev.entity.document.name=:docName and ev.attribute.name=:attrName and ev.content");
+		if(byRegexp)
+			sb.append(" like '%"+content+"%'");
+		else
+			sb.append("=:content");
+		Map<String,Object> params = new HashMap<String,Object>();
+		params.put("docName",this.getDocumentName());
+		params.put("attrName",attrName);
+		if(!byRegexp)
+			params.put("content", content);
+		PageBean<EntityValue> evp = this.entityValueDao.fetchEntityByPageHQL(sb.toString(), pageIndex, pageSize,params);
+		if (evp == null || evp.getList().size() == 0)
+			return null;
+
+		PageBean<Entity> ep = new PageBean<Entity>();
+		List<Entity> eList = new ArrayList<Entity>();
+		ep.setCurrentPage(evp.getCurrentPage());
+		ep.setPageSize(evp.getPageSize());
+		ep.setTotalPage(evp.getTotalPage());
+
+		for (EntityValue ev : evp.getList()) {
+			eList.add(ev.getEntity());
+		}
+		ep.setList(eList);
+		return ep;
+	}
+	
+	@Override
+	public PageBean<Entity> fetchGoodsByAttribute(String attrName,String content, int pageIndex, int pageSize)
+			throws NoSuchAttributeException {
+		return fetchGoodsByAttribute(attrName,content,pageIndex,pageSize,true);
+	}
+
+	@Override
+	public PageBean<Entity> fetchAllGoods(int pageIndex, int pageSize) {
+		String HQL = "from Entity e where e.document.name='"
+				+ this.getDocumentName() + "'";
+		return this.entityDao.fetchEntityByPageHQL(HQL, pageIndex, pageSize);
+	}
+
+	@Override
+	public PageBean<Entity> fetchGoodsByCategory(int catId,
+			int pageIndex, int pageSize) {
+		String HQL = "from Entity e where e.document.name=:docName and e.category.id=:catId";
+		Map<String,Object> params = new HashMap<String,Object>();
+		params.put("docName",this.getDocumentName());
+		params.put("catId",catId);
+		PageBean<Entity> result = this.entityDao.fetchEntityByPageHQL(HQL, pageIndex, pageSize,params);
+		return result;
+	}
+
+	@Override
+	public Entity getGoodsById(int entityId) throws AccessErrorException {
+		Entity entity = ((EntityDao) this.entityDao).getEntityByIdAndDocName(
+				entityId, this.getDocumentName());
+		if (entity == null)
+			throw new AccessErrorException(
+					"can not get any entity record by id=" + entityId + " and document="+this.getDocumentName());
+		return entity;
+	}
+
+	@Override
+	public Entity updateEntityValue(int entityId, Map<String, Object> contents)
+			throws ParameterException, AccessErrorException {
+		Entity entity = this.getGoodsById(entityId);
+		boolean flag = false;
+		String errorMessage = "/";
+		StringBuilder message = new StringBuilder();
+		for (String key : contents.keySet()) {
+			EntityValue ev = entity.getEntityValue(key);
+			if (ev != null) { // 该key能映射到entity_value上
+				ev.setContent(contents.get(key).toString());
+				flag = true;
+			}
+			if (!flag) { // 上面更改失败 尝试判断key是否是entity的属性
+				try {
+					// 拿到属性映射
+					Field field = Entity.class.getDeclaredField(key);
+					Class<?> fieldType = field.getType();
+					Object typeValue = fieldType.getConstructor(String.class)
+							.newInstance(contents.get(key));
+					// 拿到该属性的set方法
+					String methodName = "set"
+							+ key.substring(0, 1).toUpperCase()
+							+ key.substring(1);
+					Method fieldSetMethod = Entity.class.getDeclaredMethod(
+							methodName, fieldType);
+					// 调用
+					fieldSetMethod.invoke(entity, typeValue);
+					flag = true;
+				} catch (NoSuchFieldException e) {
+					errorMessage += "no such field name '" + key + "'" + "/";
+				} catch (InstantiationException e) {
+					errorMessage += e.getMessage() + "/";
+				} catch (IllegalAccessException e) {
+					errorMessage += e.getMessage() + "/";
+				} catch (InvocationTargetException e) {
+					errorMessage += e.getTargetException() + "/";
+				} catch (NoSuchMethodException e) {
+					errorMessage += "no such method to set value to param '"
+							+ key + "'" + "/";
+				}
+			}
+			if (!flag) {
+				if (errorMessage.length() > 1) {
+					message.append("[" + key + ":" + errorMessage + "]");
+					errorMessage = "/";
+				}
+			} else {
+				flag = false;
+			}
+		}
+		this.entityDao.updateEntity(entity);
+		if (message.length() > 0) {
+			throw new ParameterException(message.toString());
+		}
+		return entity;
+	}
+
+	@Override
+	public int checkStoreCount(int entityId, String typeName) throws AccessErrorException {
+		EntityType et = ((EntityTypeDao)entityTypeDao).getEntityType(entityId,typeName);
+		if(et == null) throw new AccessErrorException("can not find any record by entityid:"+entityId+" and typeName:"+typeName);
+		return et.getStorageCount();
+	}
+
+	@Override
+	public int clearGoodsStoreCount(int entityId) throws AccessErrorException {
+		Entity entity = this.getGoodsById(entityId);
+		int count = 0;
+		for(EntityType et:entity.getEntityTypes()){
+			count += et.getStorageCount();
+			et.setStorageCount(0);
+			entityTypeDao.saveEntity(et);
+		}
+		return count;
+	}
+
+	@Override
+	public boolean increaseGoods(int entityId, String typeName, int count) throws AccessErrorException {
+		EntityType et = ((EntityTypeDao)this.entityTypeDao).getEntityType(entityId,typeName);
+		if(et == null) throw new AccessErrorException("can not find any record by entityid:"+entityId+" and typeName:"+typeName);
+		et.setStorageCount(et.getStorageCount()+count);
+		this.entityTypeDao.updateEntity(et);
+		return true;
+	}
+
+	@Override
+	public boolean decreaseGoods(int entityId, String typeName, int count) throws AccessErrorException {
+		EntityType et = ((EntityTypeDao)this.entityTypeDao).getEntityType(entityId,typeName);
+		if(et == null) throw new AccessErrorException("can not find any record by entityid:"+entityId+" and typeName:"+typeName);
+		int c = et.getStorageCount();
+		if(c <= count) et.setStorageCount(0);
+		else et.setStorageCount(c-count);
+		this.entityTypeDao.updateEntity(et);
+		return true;
+	}
+	
+	@Override
+	public List<Entity> recommendEntitys(Category c, int size) {
+		List<Entity> entityList = new ArrayList<Entity>();
+		for(Category node : c.allSubCategory()){
+			PageBean<Entity> entitys = fetchGoodsByCategory(node.getId(), 1, 14);
+			if(entitys != null && entitys.getList().size() > 0){
+				entityList.addAll(entitys.getList());
+			}
+		}
+		if(entityList.size() <= size) return entityList;
+		Set<Integer> luckNumList = new HashSet<Integer>();
+		Random random = new Random(System.currentTimeMillis());
+		int maxSize = entityList.size();
+		while(luckNumList.size() < size){
+			int resultNum = Math.abs(random.nextInt())%maxSize;
+			luckNumList.add(resultNum);
+		}
+		List<Entity> resultList = new ArrayList<Entity>();
+		for(int luckNum:luckNumList){
+			resultList.add(entityList.get(luckNum));
+		}
+		return resultList;
+	}
+
+}

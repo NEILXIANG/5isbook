@@ -1,0 +1,251 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/action/configuration' does not exist.",1372948248129
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/user' does not exist.",1372948248130
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248131
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/manager' does not exist.",1372948248133
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/configuration' does not exist.",1372948248134
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/base' does not exist.",1372948248136
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248137
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/cms' does not exist.",1372948248138
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util' does not exist.",1372948248139
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/user' does not exist.",1372948248140
+error,log,,,"Resource '/5isbook/build/classes/parts' does not exist.",1372948248140
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/configuration' does not exist.",1372948248141
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/user' does not exist.",1372948248142
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/action' does not exist.",1372948248144
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/base' does not exist.",1372948248146
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/hibernate3/inject' does not exist.",1372948248147
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/document' does not exist.",1372948248149
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/configuration/providers' does not exist.",1372948248151
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/cms' does not exist.",1372948248152
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/action' does not exist.",1372948248153
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/cms' does not exist.",1372948248154
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods' does not exist.",1372948248156
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model' does not exist.",1372948248157
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/order' does not exist.",1372948248158
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util' does not exist.",1372948248160
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/order' does not exist.",1372948248161
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/cms/impl' does not exist.",1372948248162
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/manager' does not exist.",1372948248163
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/cms' does not exist.",1372948248164
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/cms' does not exist.",1372948248165
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/cms/impl' does not exist.",1372948248166
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/order' does not exist.",1372948248167
+error,log,,,"Resource '/5isbook/build/classes' does not exist.",1372948248168
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/user' does not exist.",1372948248169
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/user/impl' does not exist.",1372948248171
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/cms' does not exist.",1372948248172
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/cms/impl' does not exist.",1372948248174
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util' does not exist.",1372948248175
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/extension/acegi/ui/webapp' does not exist.",1372948248177
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248178
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/configuration/providers' does not exist.",1372948248179
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/hibernate3/inject/injectors' does not exist.",1372948248181
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/action/configuration' does not exist.",1372948248182
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dto' does not exist.",1372948248183
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/cms' does not exist.",1372948248184
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/order/impl' does not exist.",1372948248186
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/hibernate3/inject' does not exist.",1372948248187
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/cms/impl' does not exist.",1372948248189
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/order' does not exist.",1372948248190
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/user/impl' does not exist.",1372948248192
+error,log,,,"Resource '/5isbook/build/classes' does not exist.",1372948248193
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/detail/providers' does not exist.",1372948248195
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248197
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util' does not exist.",1372948248198
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/cms' does not exist.",1372948248199
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/extension/acegi' does not exist.",1372948248200
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/user/impl' does not exist.",1372948248201
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248203
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248204
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util' does not exist.",1372948248205
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/order' does not exist.",1372948248206
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/order' does not exist.",1372948248208
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/extension/acegi' does not exist.",1372948248209
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/configuration/providers' does not exist.",1372948248210
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248211
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/action/configuration' does not exist.",1372948248212
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/order' does not exist.",1372948248213
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/order/impl' does not exist.",1372948248216
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/cms/impl' does not exist.",1372948248217
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/order' does not exist.",1372948248219
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/user/impl' does not exist.",1372948248219
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook' does not exist.",1372948248220
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/cms' does not exist.",1372948248222
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/user' does not exist.",1372948248223
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/user/impl' does not exist.",1372948248226
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/action/configuration' does not exist.",1372948248227
+error,log,,,"Resource '/5isbook/build/classes' does not exist.",1372948248228
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/listener' does not exist.",1372948248230
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service' does not exist.",1372948248231
+error,log,,,"Resource '/5isbook/build/classes' does not exist.",1372948248232
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/extension/acegi' does not exist.",1372948248233
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248234
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook' does not exist.",1372948248236
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/impl' does not exist.",1372948248237
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/action/configuration' does not exist.",1372948248239
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service' does not exist.",1372948248241
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/cms' does not exist.",1372948248241
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/cms' does not exist.",1372948248244
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/extension/acegi/providers' does not exist.",1372948248245
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/detail' does not exist.",1372948248247
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/hibernate3/inject' does not exist.",1372948248250
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/cms/impl' does not exist.",1372948248251
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248252
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/user' does not exist.",1372948248255
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/order' does not exist.",1372948248258
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/detail' does not exist.",1372948248259
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/manager' does not exist.",1372948248264
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/action/configuration' does not exist.",1372948248265
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/order' does not exist.",1372948248268
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248268
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/detail' does not exist.",1372948248269
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248270
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/action/configuration' does not exist.",1372948248271
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/extension/acegi' does not exist.",1372948248272
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/springutil' does not exist.",1372948248273
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/detail/providers' does not exist.",1372948248273
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/configuration' does not exist.",1372948248274
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/order' does not exist.",1372948248275
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao' does not exist.",1372948248277
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248278
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/order' does not exist.",1372948248280
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/order' does not exist.",1372948248281
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/manager/book' does not exist.",1372948248282
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/cms' does not exist.",1372948248284
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/user' does not exist.",1372948248284
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model' does not exist.",1372948248285
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248288
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/order' does not exist.",1372948248288
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248289
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util' does not exist.",1372948248290
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/user' does not exist.",1372948248292
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/order' does not exist.",1372948248293
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util' does not exist.",1372948248295
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/cms' does not exist.",1372948248295
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao' does not exist.",1372948248297
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/order' does not exist.",1372948248298
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/configuration/providers' does not exist.",1372948248299
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248300
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/detail/providers' does not exist.",1372948248301
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248303
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/order' does not exist.",1372948248304
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248305
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/manager/book' does not exist.",1372948248308
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248308
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/hibernate3/aware' does not exist.",1372948248309
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/user' does not exist.",1372948248310
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/exceluitl' does not exist.",1372948248311
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util' does not exist.",1372948248313
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/hibernate3/inject/injectors' does not exist.",1372948248343
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/model/order' does not exist.",1372948248344
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/order/impl' does not exist.",1372948248344
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/manager' does not exist.",1372948248345
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/util/extension/acegi/ui/webapp' does not exist.",1372948248345
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/action/configuration' does not exist.",1372948248346
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/action/configuration' does not exist.",1372948248347
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/cms/impl' does not exist.",1372948248347
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/document' does not exist.",1372948248348
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dto' does not exist.",1372948248349
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods' does not exist.",1372948248349
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/order/impl' does not exist.",1372948248350
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/manager' does not exist.",1372948248352
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/service/goods/detail' does not exist.",1372948248353
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/cms' does not exist.",1372948248354
+error,log,,,"Resource '/5isbook/build/classes/com/wisbook/dao/cms' does not exist.",1372948248355
+started,bundle,org.eclipse.jst.jee,1.0.401.v201105122000,"org.eclipse.jst.jee",1372948248441
+started,bundle,org.eclipse.wst.sse.core,1.1.601.v201108151912,"org.eclipse.wst.sse.core",1372948248819
+started,bundle,org.eclipse.wst.html.core,1.1.501.v201109080146,"org.eclipse.wst.html.core",1372948248913
+started,bundle,org.eclipse.wst.css.core,1.1.500.v201104191926,"org.eclipse.wst.css.core",1372948260352
+started,bundle,org.eclipse.jst.jsp.core,1.2.401.v201108302147,"org.eclipse.jst.jsp.core",1372948260421
+started,bundle,org.eclipse.wst.dtd.core,1.1.501.v201107252021,"org.eclipse.wst.dtd.core",1372948260464
+started,bundle,org.eclipse.jdt.apt.core,3.3.500.v20110420-1015,"org.eclipse.jdt.apt.core",1372948260586
+started,bundle,org.eclipse.jdt.apt.pluggable.core,1.0.400.v20110305-1450,"org.eclipse.jdt.apt.pluggable.core",1372948260591
+started,bundle,org.eclipse.wst.sse.ui,1.3.1.v201108191312,"org.eclipse.wst.sse.ui",1372948261787
+started,bundle,org.eclipse.wst.html.ui,1.0.601.v201108152113,"org.eclipse.wst.html.ui",1372948261788
+started,bundle,org.eclipse.jst.jsf.common,1.2.3.v201104061039,"org.eclipse.jst.jsf.common",1372948261801
+started,bundle,org.eclipse.jst.jsf.core,1.3.105.v201108261005,"org.eclipse.jst.jsf.core",1372948261806
+started,bundle,org.eclipse.wst.wsdl.validation,1.1.502.v201104071820,"org.eclipse.wst.wsdl.validation",1372948261861
+started,bundle,org.eclipse.wst.xsd.core,1.1.600.v201104070312,"org.eclipse.wst.xsd.core",1372948261863
+started,bundle,org.eclipse.wst.xsl.core,1.1.100.v201102270516,"org.eclipse.wst.xsl.core",1372948261869
+started,bundle,org.eclipse.wst.common.uriresolver,1.1.401.v201004280700,"org.eclipse.wst.common.uriresolver",1372948261928
+started,bundle,org.eclipse.wst.xsl.exslt.core,1.0.0.v201005240426,"org.eclipse.wst.xsl.exslt.core",1372948261946
+started,bundle,org.eclipse.wst.internet.cache,1.0.400.v201004280700,"org.eclipse.wst.internet.cache",1372948262061
+started,bundle,org.eclipse.jst.jsf.facelet.ui,1.0.1.v201104032306,"org.eclipse.jst.jsf.facelet.ui",1372948272161
+started,bundle,org.eclipse.jst.jsf.facelet.core,1.0.100.v201104191527,"org.eclipse.jst.jsf.facelet.core",1372948272180
+started,bundle,org.eclipse.wst.xml.ui,1.1.201.v201108151912,"org.eclipse.wst.xml.ui",1372948293557
+started,bundle,org.eclipse.debug.ui,3.7.101.v20110817_r371,"org.eclipse.debug.ui",1372948293794
+started,bundle,org.eclipse.wst.dtd.ui,1.0.600.v201103171359,"org.eclipse.wst.dtd.ui",1372948294142
+started,bundle,org.eclipse.wst.xsl.ui,1.1.200.v201103082057,"org.eclipse.wst.xsl.ui",1372948294680
+opened,editor,org.eclipse.wst.xml.ui,1.1.201.v201108151912,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1372948294726
+activated,editor,org.eclipse.wst.xml.ui,1.1.201.v201108151912,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1372948294823
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1372948294847
+started,bundle,org.eclipse.core.variables,3.2.500.v20110511,"org.eclipse.core.variables",1372948295725
+activated,editor,org.eclipse.wst.xml.ui,1.1.201.v201108151912,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1372948296197
+started,bundle,org.eclipse.jst.jsp.ui,1.1.601.v201108151912,"org.eclipse.jst.jsp.ui",1372948298694
+started,bundle,org.eclipse.mylyn.java.tasks,3.6.0.v20110608-1400,"org.eclipse.mylyn.java.tasks",1372948298884
+started,bundle,org.eclipse.jdt.junit,3.7.0.v20110505-0800,"org.eclipse.jdt.junit",1372948300236
+executed,command,,,"AUTOGEN:::org.eclipse.core.runtime.xml.source.ruler.actions/org.eclipse.ui.texteditor.SelectRulerAction",1372948300264
+executed,command,,,"AUTOGEN:::org.eclipse.core.runtime.xml.source.ruler.actions/org.eclipse.ui.texteditor.SelectRulerAction",1372948303857
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1372948306746
+opened,editor,org.eclipse.wst.xml.ui,1.1.201.v201108151912,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1372948306850
+activated,editor,org.eclipse.wst.xml.ui,1.1.201.v201108151912,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1372948306905
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1372948306953
+activated,editor,org.eclipse.wst.xml.ui,1.1.201.v201108151912,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1372948307545
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1372948311971
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1372948322132
+started,bundle,org.eclipse.jdt.debug,3.7.1.v20110802_r371,"org.eclipse.jdt.debug",1372948322317
+started,bundle,org.eclipse.jdt.debug.ui,3.6.1.v20110803_r371,"org.eclipse.jdt.debug.ui",1372948322498
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1372948322560
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1372948322589
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1372948323411
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948329892
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948330400
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.ClassFileEditor",1372948338537
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.ClassFileEditor",1372948338572
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1372948340927
+closed,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.ClassFileEditor",1372948340927
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1372948347124
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948353880
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948354569
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948355213
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948449739
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948452611
+started,bundle,org.eclipse.jst.server.tomcat.core,1.1.300.v20110427,"org.eclipse.jst.server.tomcat.core",1372948462224
+started,bundle,org.eclipse.jst.server.tomcat.ui,1.1.200.v20100418,"org.eclipse.jst.server.tomcat.ui",1372948462230
+error,log,,,"JavaBuilder handling ImageBuilderInternalException while building: 5isbook",1372948480971
+opened,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1372948481027
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1372948481134
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.window.preferences",1372948483912
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948483935
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1372948498771
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1372948500894
+activated,view,org.eclipse.ui.ide,3.7.0.v20110809-1737,"org.eclipse.ui.views.ProblemView",1372948514329
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948526581
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1372948528925
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948528952
+activated,editor,org.eclipse.wst.xml.ui,1.1.201.v201108151912,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1372948530020
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1372948534324
+activated,editor,org.eclipse.wst.xml.ui,1.1.201.v201108151912,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1372948535395
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1372948546189
+started,bundle,org.eclipse.equinox.p2.garbagecollector,1.0.200.v20110510,"org.eclipse.equinox.p2.garbagecollector",1372948547161
+activated,editor,org.eclipse.wst.xml.ui,1.1.201.v201108151912,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1372948553771
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948559292
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948561158
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948570392
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948570512
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948571223
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948572006
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948572437
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948572857
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948573130
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948573619
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948578309
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948578958
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1372948580751
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1372948592582
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1372948592639
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1372948592671
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1372948593608
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948601752
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1372948602663

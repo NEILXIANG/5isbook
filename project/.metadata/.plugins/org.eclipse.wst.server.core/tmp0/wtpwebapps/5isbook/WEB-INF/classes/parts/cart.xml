@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts> 
+	<package name="cart" namespace="/cart" extends="defaultPackage">
+	
+		<default-action-ref name="index"/>
+		<!-- 购物车首页 -->
+		<action name="index" class="com.wisbook.action.cart.indexAction">
+			<result name="success">/cart/carbuyer.jsp</result>
+		</action>
+		
+		<!-- 添加一个购物车项,添加完后重定向回商品首页-->
+		<action name="add" class="com.wisbook.action.cart.addAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">index</param>
+				<param name="namespace">/cart</param>
+			</result>
+		</action>
+		
+		<!-- 删除购物车项，删除完后重定向首页 -->
+		<action name="delete" class="com.wisbook.action.cart.deleteAndClearAction" method="delete">
+			<result name="success" type="redirectAction">
+				<param name="actionName">index</param>
+				<param name="namespace">/cart</param>
+			</result>
+		</action>
+		
+		<!-- 清除购物车 --> 
+		<action name="clear" class="com.wisbook.action.cart.deleteAndClearAction" method="clear">
+			<result name="success" type="redirectAction">
+				<param name="actionName">index</param>
+				<param name="namespace">/cart</param>
+			</result>
+		</action>
+		
+		<!-- 增加购物车项的数量 参数1：购物车项id 参数2：增加数量num 应该由异步调用 -->
+		<action name="increase" class="com.wisbook.action.cart.increaseAndDecreaseAction" method="increase"></action>
+		<!-- 减少购物车项的数量，参数同上 -->
+		<action name="decrease" class="com.wisbook.action.cart.increaseAndDecreaseAction" method="decrease"></action>
+		
+		<!-- 结算 -->
+		<action name="checkout" class="com.wisbook.action.cart.checkoutAction">
+			<result name="success">/cart/checkout.jsp</result>
+			<result name="empty" type="redirectAction">
+				<param name="actionName">index</param>
+				<param name="namespace">/cart</param>
+			</result>
+			<result name="null_address">/cart/checkout.jsp</result><!-- 没地址 -->
+		</action>
+		
+		<!-- 订单成功 -->
+		<action name="buy" class="com.wisbook.action.cart.buyAction">
+			<result name="success">/cart/orderResult.jsp</result>
+			<result name="cart_null" type="redirectAction">
+				<param name="actionName">index</param>
+				<param name="namespace">/cart</param>
+			</result>
+			<result name="null_address" type="redirectAction">  <!-- 地址不可用 -->
+				<param name="actionName">checkout</param>
+				<param name="namespace">/cart</param>
+			</result>
+		</action>
+		
+	</package>
+</struts>
+	

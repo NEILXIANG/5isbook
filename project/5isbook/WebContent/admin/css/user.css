@@ -1,0 +1,26 @@
+/*用户中心(usercenter)*/
+.content .user_content{padding:10px; width:1100px; margin:0 auto;}
+
+.leftBar{z-index: 19; width:120px; height:180px; font-family:'微软雅黑';position:fixed;float:left;border:1px solid #CCC;
+-moz-box-shadow:2px 2px 3px #A1A1A1; -webkit-box-shadow:2px 2px 3px #A1A1A1; box-shadow:2px 2px 3px #A1A1A1; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px;}
+.leftBar .sideMenu{margin:5px auto; width:120px;}
+.leftBar .sideMenu li{margin-top:10px; text-align:center;}
+
+.rightMain{width:740px; min-height:550px; margin-left:130px; border:1px solid #CCC; margin-bottom:10px; -moz-box-shadow:2px 2px 3px #A1A1A1; -webkit-box-shadow:2px 2px 3px #A1A1A1; box-shadow:2px 2px 3px #A1A1A1; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px;}
+.rightMain table{margin-bottom:10px; border:1px solid #CCC;}
+.rightMain th{ background:#F7FEF1;}
+.rightMain th,td{padding:5px; text-align:center;}
+.rightMain hr{margin-top:5px;}
+
+.rightMain .main{margin:10px auto; width:700px; min-height:350px; padding:10px;}
+.rightMain .main .tab-content{padding:10px;}
+.rightMain .main .tab-content li{margin-top:5px;}
+
+.user-board{width:210px; height:150px; float:left; margin:0 0 0 10px; border:1px solid #CCC; -moz-box-shadow:2px 2px 3px #A1A1A1; -webkit-box-shadow:2px 2px 3px #A1A1A1; box-shadow:2px 2px 3px #A1A1A1; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px; color:#666; font-size:12px;}
+.user-board .title{background:#8BC53F; height:25px;}
+.user-board .title .font{ margin-left:10px; color:#FFF;}
+.user-board .img-avatars{float:left; margin:10px 0 0 5px;}
+.user-board ul{margin:10px 0 0 5px; float:left;}
+.user-board .lastest{float:left; margin:15px 0 0 5px;}
+
+/*end 用户中心(usercenter)*/

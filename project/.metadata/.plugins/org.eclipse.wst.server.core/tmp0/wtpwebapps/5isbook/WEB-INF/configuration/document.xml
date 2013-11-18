@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<!-- 配置系统 元属性,注意命名格式-->
+	<raw name="text" display_name="文本"/>
+	<raw name="richText" display_name="富文本"/>
+	
+	<!-- 配置文档 -->
+	<document name="book" display_name="书本">
+		<!-- 配置文档属性  价格 折扣图书数量已经挖出entity那里了-->
+		<attribute name="isbn" display_name="isbn" raw_name="text"/>
+		<attribute name="title" display_name="书名" raw_name="text"/>
+		<attribute name="image" display_name="原始图书图片(小)" raw_name="text"/>
+		<attribute name="medium_image" display_name="图书图片(中)" raw_name="text"/>
+		<attribute name="large_image" display_name="图书图片(大)" raw_name="text"/>
+		<attribute name="author" display_name="作者" raw_name="text"/>
+		<attribute name="publisher" display_name="出版社" raw_name="text"/>
+		<attribute name="pubdate" display_name="出版时间" raw_name="text"/>
+		<attribute name="pages" display_name="页数" raw_name="text"/>
+		<attribute name="summary" display_name="详情" raw_name="richText"/>
+		<attribute name="author-intro" display_name="作者简介" raw_name="richText"/>
+	</document>
+</config> 

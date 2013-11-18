@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd"
+           default-lazy-init="true">
+	<!-- 用注解进行ioc管理 -->
+	<context:annotation-config /> 
+	<!-- ioc扫描路径 -->
+	<context:component-scan base-package="com.wisbook" />
+
+	<!-- 权限~~~~~~~~~~参考：http://zhanjia.iteye.com/blog/255561~~~~~~~~~~~~~~~ -->
+	
+	<!-- filter代理 -->
+	<bean id="filterChainProxy" class="org.acegisecurity.util.FilterChainProxy">
+		<property name="filterInvocationDefinitionSource">
+			<!--,securityContextHolderAwareRequestFilter,,rememberMeProcessingFilter-->
+			<value><![CDATA[
+				CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+				PATTERN_TYPE_APACHE_ANT
+				/**=httpSessionContextIntegrationFilter,anonymousProcessingFilter,logoutFilter,preAuthenticationProcessingFilter,authenticationProcessingFilter,exceptionTranslationFilter,filterInvocationInterceptor
+			]]></value>
+		</property>
+	</bean>
+	
+	<bean id="preAuthenticationProcessingFilter" class="com.wisbook.util.extension.acegi.PreAuthenticationProcessingFilter">
+		<property name="targetClass" value="com.wisbook.util.extension.acegi.providers.UserKindComparisonAware"/>
+	</bean>
+	
+	<!-- sif -->
+	<bean id="httpSessionContextIntegrationFilter" class="org.acegisecurity.context.HttpSessionContextIntegrationFilter"/>
+	
+	<!-- lof -->
+	<bean id="logoutFilter" class="org.acegisecurity.ui.logout.LogoutFilter">
+		<constructor-arg value="/pass/login.jsp"/> <!-- 退出后重定向的url -->
+		<constructor-arg>
+			<list>
+				<!-- 用于清空cookies  
+				<ref bean="rememberMeServices"/>
+				-->
+				<!-- 清理现场 销毁session 清空 ContextHolder -->
+				<bean class="org.acegisecurity.ui.logout.SecurityContextLogoutHandler"/>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<!-- sch -->
+	<!-- 
+	<bean id="securityContextHolderAwareRequestFilter" class="org.acegisecurity.wrapper.SecurityContextHolderAwareRequestFilter"/>
+	 -->
+
+	<!-- remenber me  
+	<bean id="rememberMeProcessingFilter" class="org.acegisecurity.ui.rememberme.RememberMeProcessingFilter">
+		<property name="authenticationManager" ref="authenticationManager"/>
+		<property name="rememberMeServices" ref="rememberMeServices"/>
+	</bean>
+	-->
+	<!-- 增加, 默认tokenValiditySeconds = 1209600L, 即保留两周 
+	<bean id="rememberMeServices" class="org.acegisecurity.ui.rememberme.TokenBasedRememberMeServices">
+		<property name="userDetailsService" ref="nomalDaoDetailsService"/>
+		 cookie中的键值, 防止保存到客户端的cookie中的加密串被恶意篡改 
+		<property name="key" value="primaryKey"/>
+		 cookie有效时间, 单位为秒, 这里设定为5天内不用再登陆  
+    	<property name="tokenValiditySeconds" value="432000" />
+	</bean>
+	-->
+	
+	<!-- AM -->
+	<bean id="authenticationManager" class="org.acegisecurity.providers.ProviderManager">
+		<property name="providers">
+			<list>
+				<!--从数据库中取-->
+				<ref local="userDaoAuthenticationProvider"/>
+				<ref local="adminDaoAuthenticationProvider"/>
+				<!--匿名用户-->
+				<bean class="org.acegisecurity.providers.anonymous.AnonymousAuthenticationProvider">
+					<property name="key" value="primaryKey"/>
+				</bean>
+				<!--从cookie中取
+				<bean class="org.acegisecurity.providers.rememberme.RememberMeAuthenticationProvider">
+					<property name="key" value="primaryKey"/>
+				</bean>
+				-->
+			</list>
+		</property>
+	</bean>
+	
+	<!-- dap -->
+	<!-- 正常配置 
+	<bean id="nomalDaoaoAuthenticationProvider" class="org.acegisecurity.providers.dao.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="userDetailsService"/>
+		  缓存用户信息 
+		<property name="userCache"><ref local="userCache"/></property>
+	</bean>
+	 -->
+	<bean id="userDaoAuthenticationProvider" class="com.wisbook.util.extension.acegi.providers.MUKDaoAuthenticationProvider">
+		<property name="userDetailsService" ref="userDaoDetailsService"></property>
+		<property name="expectedUserKind" value="1"></property>
+	</bean>
+	<bean id="adminDaoAuthenticationProvider" class="com.wisbook.util.extension.acegi.providers.MUKDaoAuthenticationProvider">
+		<property name="userDetailsService" ref="adminDaoDetailsService"></property>
+		<property name="expectedUserKind" value="0"></property>
+	</bean>
+	
+	<!-- user detail service -->
+	<!-- UserDetailsService is the most commonly frequently Acegi Security interface implemented by end users -->
+	<bean id="userDaoDetailsService" class="org.acegisecurity.userdetails.jdbc.JdbcDaoImpl">
+		<property name="usersByUsernameQuery">  
+            <value>select account as username,password,enabled from user,role where user.role_id=role.id and role.name='ROLE_USER' and account=?</value>  
+        </property>  
+        <property name="authoritiesByUsernameQuery">  
+            <value>select account as username,name as authority from user,role where user.role_id=role.id and role.name='ROLE_USER' and account=?</value>  
+        </property>  
+        <property name="dataSource">  
+            <ref local="dataSource"/>  
+        </property>  
+	</bean>
+	<bean id="adminDaoDetailsService" class="org.acegisecurity.userdetails.jdbc.JdbcDaoImpl">
+		<property name="usersByUsernameQuery">  
+            <value>select account as username,password,enabled from user,role where user.role_id=role.id and role.name!='ROLE_USER' and account=?</value>  
+        </property>  
+        <property name="authoritiesByUsernameQuery">  
+            <value>select account as username,name as authority from user,role where user.role_id=role.id and role.name='ROLE_USER' and account=?</value>  
+        </property>  
+        <property name="dataSource">  
+            <ref local="dataSource"/>  
+        </property>  
+	</bean>
+	<!-- 
+	<bean id="nomalDaoDetailsService" class="org.acegisecurity.userdetails.jdbc.JdbcDaoImpl">
+		<property name="usersByUsernameQuery">  
+            <value>select account as username,password,enabled from user,role where user.role_id=role.id and account=?</value>  
+        </property>  
+        <property name="authoritiesByUsernameQuery">  
+            <value>select account as username,name as authority from user,role where user.role_id=role.id and and account=?</value>  
+        </property>  
+        <property name="dataSource">  
+            <ref local="dataSource"/>  
+        </property>  
+	</bean>		
+	 -->
+	<!-- 匿名 -->
+	<bean id="anonymousProcessingFilter" class="org.acegisecurity.providers.anonymous.AnonymousProcessingFilter">
+		<property name="key" value="changeThis"/>
+		<property name="userAttribute" value="anonymousUser,ROLE_ANONYMOUS"/>
+	</bean>
+	
+	<!-- fii -->
+	<bean id="filterInvocationInterceptor" class="org.acegisecurity.intercept.web.FilterSecurityInterceptor">
+		<property name="authenticationManager" ref="authenticationManager"/>
+		<property name="accessDecisionManager">
+			<!--
+				（1）UnanimousBased（全票通过）：所有投票器都通过才允许访问资源。
+				（2）ConsensusBased（少数服从多数）：超过一半的投票器通过才允许访问资源。
+				（3）AffirmativeBased（一票通过）：只要有一个投票器投票通过，就允许访问资源
+			-->
+			<bean class="org.acegisecurity.vote.AffirmativeBased">
+				<property name="allowIfAllAbstainDecisions" value="false"/>
+				<property name="decisionVoters">
+					<list>
+						<bean class="org.acegisecurity.vote.RoleVoter"/>
+						<!--<bean class="org.acegisecurity.vote.AuthenticatedVoter"/>-->
+					</list>
+				</property>
+			</bean>
+		</property>
+		<property name="objectDefinitionSource">
+			<value><![CDATA[
+				CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+				PATTERN_TYPE_APACHE_ANT
+				/5isbook/admin/pass/**=ROLE_ANONYMOUS
+			]]></value>
+		</property>
+	</bean>
+	<!--/admin/pass/**=ROLE_ANONYMOUS,ROLE_USER,ROLE_ADMIN
+				/admin/**=ROLE_ADMIN  -->
+
+
+	 <!-- for test -->
+	 <!-- 
+	<bean id="userDetailsService" class="com.wisbook.util.UserServiceLoginImpl"></bean> 	
+	 -->
+	
+	<!-- apf -->
+	<bean id="authenticationProcessingFilter" class="com.wisbook.util.extension.acegi.ui.webapp.MUKAuthenticationProcessingFilter">
+		<property name="authenticationManager" ref="authenticationManager"/>
+		<!-- defaultTarget must start with '/' or with 'http(s)' -->
+		<property name="userKindToPathList">
+			<list>
+				<bean class="com.wisbook.util.extension.acegi.ui.webapp.UserKindToPath">
+					<property name="userKind" value="1"/>
+					<property name="defaultTargetUrl" value="/1/1/1/1"/>
+					<property name="authenticationFailureUrl" value="/1/1/1/1"/>
+				</bean>
+				<bean class="com.wisbook.util.extension.acegi.ui.webapp.UserKindToPath">
+					<property name="userKind" value="0"/>
+					<property name="defaultTargetUrl" value="/0/0/0"/>
+					<property name="authenticationFailureUrl" value="/0/0/0"/>
+				</bean>
+			</list>
+		</property>
+		<property name="filterProcessesUrl" value="j_acegi_security_check"/>
+		<!-- 
+		<property name="authenticationFailureUrl" value="/pass/login.jsp?login_error=1"/>
+		<property name="defaultTargetUrl" value="/user/index.jsp"/>
+		 -->
+		<!-- 
+		<property name="rememberMeServices" ref="rememberMeServices"/>
+		 -->
+	</bean>
+	
+	<!-- etf -->
+	<bean id="exceptionTranslationFilter" class="org.acegisecurity.ui.ExceptionTranslationFilter">
+		<!-- 尚未登录, 进入非法(未认证不可访问)区域 -->
+		<property name="authenticationEntryPoint">
+			<bean class="org.acegisecurity.ui.webapp.AuthenticationProcessingFilterEntryPoint">
+				<property name="loginFormUrl" value="/pass/login.jsp"/>
+				<property name="forceHttps" value="false"/>
+			</bean>
+		</property>
+		<!-- 登录后, 进入非授权区域 -->
+		<property name="accessDeniedHandler">
+			<bean class="org.acegisecurity.ui.AccessDeniedHandlerImpl">
+				<property name="errorPage" value="/error/404.jsp"/>
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- 配置缓存 -->
+	<!-- EhCacheBasedUserCache是EhCache的一个缓存实现，提供了向缓存中放入、取得和删除用户明细信息的功能，Acegi需要用它来管理缓存。   
+	<bean id="userCache" class="org.acegisecurity.providers.dao.cache.EhCacheBasedUserCache">  
+      <property name="cache" ref="userCacheBackend" />  
+    </bean>  
+  -->
+	<!-- EhCacheFactoryBean是用于维护Cache实例的工厂Bean，Cache需要依赖于CacheManager而存在   
+   	<bean id="userCacheBackend" class="org.springframework.cache.ehcache.EhCacheFactoryBean">  
+      <property name="cacheManager" ref="cacheManager" />  
+      <property name="cacheName" value="acegiCache" />
+   	</bean>  
+  -->
+   <!-- 缓存管理器，一个CacheManager能够创建和维护多个Cache实例 
+   <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" scope="singleton"/>  
+	 --> 
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	
+	<!-- 事务管理  -->
+	<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<aop:config>
+		<!-- 注册切片 -->
+		<aop:pointcut id="bussinessService" expression="execution(public * com.wisbook.service..*.*(..))" />
+		
+		<!-- 申请切片 -->
+		<aop:advisor pointcut-ref="bussinessService" advice-ref="txAdvice" />
+		
+	</aop:config>
+	
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<!-- <tx:method name="exists" read-only="true" />  -->
+			<tx:method name="*" propagation="REQUIRED"/>
+		</tx:attributes>
+	</tx:advice>
+	<!-- end -->
+	
+	<!-- tools -->
+	<!-- 开放ApplicationContext的工具类 ,立马加载-->
+	<bean class="com.wisbook.util.springutil.ApplicationContextUtil" lazy-init="false"/>
+	<!-- 注入者集合-->
+	<bean id="injectorHolder" class="com.wisbook.hibernate3.inject.InjectorHolder" lazy-init="false">
+		<!-- 注入者 -->
+		<property name="injectors">
+			<list>
+				<bean class="com.wisbook.hibernate3.inject.injectors.EntityTypeDaoInjector"/>
+				<bean class="com.wisbook.hibernate3.inject.injectors.EntityValueDaoInjector"/>
+			</list>
+		</property>
+	</bean>
+	<!-- end -->
+	
+	<!-- 数据源 -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<value>classpath:jdbc.properties</value>
+		</property>
+	</bean>
+
+	<bean id="dataSource" destroy-method="close" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+	
+	<!-- hibernate session工厂，采用注解方式进行管理 -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<!-- 注入数据源 -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- 定义hibernate扫描model类的路径 -->
+		<property name="packagesToScan">
+			<list>
+				<value>com.wisbook.model.user</value>
+				<value>com.wisbook.model.order</value>
+				<value>com.wisbook.model.cms</value>
+			</list>
+		</property>
+		<!-- hibernate的特别配置 -->
+		<property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+	</bean>
+	
+	<!-- 开放了query接口 -->
+	<bean id="hibernateTemplate" class="com.wisbook.util.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+</beans>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts> 
+	<!-- 个人中心 -->
+	<package name="user" namespace="/user" extends="defaultPackage">
+	
+	<default-action-ref name="index"/>
+	<!-- 个人中心首页 -->
+	<action name="index" class="com.wisbook.action.user.indexAction">
+		<result name="success">/user/myCenter.jsp</result>
+	</action>
+	<!-- 个人 订单  -->
+	<action name="order" class="com.wisbook.action.user.orderIndex">
+		<result name="success">/user/myOrder.jsp</result>
+	</action>
+	<!-- 订单详细 -->
+	<action name="orderview" class="com.wisbook.action.user.orderView">
+		<result>/user/myOrderDetail.jsp</result>
+	</action>
+	<!-- 取消订单 -->
+	<action name="ordercancel" class="com.wisbook.action.user.orderCancel">
+		<result name="success" type="redirectAction">
+			<param name="actionName">order</param>
+			<param name="namespace">/user</param>
+			<param name="req">done</param>
+		</result>
+	</action>
+	
+	</package>
+	
+	<!-- 地址 -->
+	<package name="address" namespace="/user/address" extends="user">
+	<default-action-ref name="index"/>
+	<!-- 地址首页 -->
+	<action name="index" class="com.wisbook.action.user.addressIndex">
+		<result name="success">/user/myAddressBox.jsp</result>
+	</action>
+	<!-- 添加新地址 -->
+	<action name="add" class="com.wisbook.action.user.addAddress">
+		<!-- 成功，调回首页 -->
+		<result name="success" type="redirectAction">
+			<param name="actionName">index</param>
+			<param name="namespace">/user/address</param>
+		</result>
+		<!-- 失败，调回表单页 -->
+		<result name="input" type="redirectAction">
+			<param name="actionName">index</param>
+			<param name="namespace">/user/address</param>
+		</result>
+	</action>
+	<!-- 删除 -->
+	<action name="delete" class="com.wisbook.action.user.deleteAddress">
+		<result name="success" type="redirectAction">
+			<param name="actionName">index</param>
+			<param name="namespace">/user/address</param>
+		</result>
+	</action>
+	<!-- 修改 -->
+	<action name="modify" class="com.wisbook.action.user.modifyAddress">
+		<result name="success" type="redirectAction">
+			<param name="actionName">index</param>
+			<param name="namespace">/user/address</param>
+		</result>
+		<result name="input">/user/myAddressEdit.jsp</result>
+	</action>
+	</package>
+	
+	<!-- 个人 资料 -->
+	<package name="info" namespace="/user/info" extends="user">
+		<default-action-ref name="nomalinfo"/>
+		<!-- 个人基本资料 -->
+		<action name="nomalinfo" class="com.wisbook.action.user.nomalInfoAction">
+			<result name="success">/user/nomalInfo.jsp</result>
+			<result name="input">/user/nomalInfo.jsp</result>
+		</action>
+		<!-- 更改密码 -->
+		<action name="changepassword" class="com.wisbook.action.user.changePassword">
+			<result name="input">/user/changepwd.jsp</result>
+			<result name="success">/user/changepwd.jsp</result>
+		</action>
+	</package> 
+</struts>
+	

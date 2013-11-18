@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+	
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<!--
+	<?xml version="1.0" encoding="UTF-8"?>
+<WISPAccessGatewayParam xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.acmewisp.com/WISPAccessGatewayParam.xsd">
+	<Proxy>
+		<MessageType>110</MessageType>
+		<NextURL>http://cmccportal.aicent.net/gis.php?Home_operator=H000090310&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080&amp;Client_type=wispr</NextURL>
+		<ResponseCode>200</ResponseCode>
+	</Proxy>
+</WISPAccessGatewayParam>
+  -->
+		
+
+		
+
+		<script type="text/javascript">
+	var ctx="/wlan";
+	var errmsg = '';
+	var online="";
+	var loginModel="";
+	var autoLogin='';
+	var wlanacname='1144.0010.100.00';
+	var ssid='CMCC';
+	var httpPath='http://221.176.1.140:8080/wlan';
+	var httpsPath='https://221.176.1.140:8090/wlan';
+	var userip='183.244.37.159';
+	var acip='117.130.250.54';
+	var cmccxxusermessage='请输入您的用户名';
+	var cmccxxusermeaage='用户名不能为空';
+	var cmccxxpassword='密码不能为空';
+	var cmccxxenterpassword='请输入您的密码';
+	var cmccxxsorry='对不起，用户名只能含有数字和英文字符';
+	var cmccxxcode='请输入您的验证码';
+	var cmccxxyanzhengma1='验证码不能小于4位';
+	var cmccxxyanzhengma2='验证码不能大于4位';
+	var cmccxxyanzhengma3='对不起，验证码只能包含数字和英文字符';
+	var cmccxxzhanghao='账号必须是手机号码';
+	var cmccxxyonghu1='用户名不能小于11位';
+	var cmccxxyonghu2='用户名不能大于11位';
+	var cmccxxyonghu3='对不起，用户名只能含有数字';
+	var cmccxxdongtai1='请输入您获取的最新动态密码';
+	var cmccxxdongtai2='您输入的动态密码中含有非法字符，空格或??';
+	var cmccxxduqu='读取参数错误';
+	var cmccxxcaozuo='操作过程中报错!';
+	var cmccxxzaixian='同一用户在线，是否强制上线?';
+	var cmccxxtaocan='请选择您要订购的套餐类型';
+	var cmccxxshouji='请输入您的11位手机号码';
+	var cmccxxfeifa='您输入的静态密码中含有非法字符，空格或';
+	var cmccxxfeifa1='';
+	var cmccxxshuru='请输入手机号码';
+	var cmccxxxingba='';
+	var cmccxxerror='';
+	var cmccxxshengqing='';
+	var cmccxxzhineng='';
+	var cmccxxshuruf='';
+	var cmccxxshoujif='';
+	var cmccxxcodef='';
+	var cmccxxyanzhengma1f='';
+	var cmccxxyanzhengma2f='';
+	var cmccxxyanzhengma3f='';
+	var cmccxxxingbaf='';
+	var cmccxxerrorf='';
+	var cmccxxshengqingf='';
+	var cmccxxyonghu3f='';
+	var cmccxxzhinengf='';
+	var cmccxxshuruen='';
+	var cmccxxshoujien='';
+	var cmccxxcodeen='';
+	var cmccxxyanzhengma1en='';
+	var cmccxxyanzhengma2en='';
+	var cmccxxyanzhengma3en='';
+	var cmccxxxingbaen='';
+	var cmccxxerroren='';
+	var cmccxxshengqingen='';
+	var cmccxxyonghu3en='';
+	var cmccxxzhinengen='';
+	var cmccxxone='';
+	var cmccxxtwoqueren='';
+	var cmccxxthreecode='';
+	var cmccxxfouryuedu='';
+	var cmccxxshenqingdi='';
+	var cmccxxzhanghaodi='';
+	var cmccxxquerenzhanghao='';
+	var cmccxxmiamadao='';
+	var cmccxxzuileixing='';
+	var cmccxxjinggao='发送czwlanmm到10086，即可重新获得密码，密码将通过短信发送给您。';
+	var cmccxxchaoguo='';
+	var cmccxxmimaxu='';
+    var easypasswordswitch='false';
+	var easypassword='123456';
+	var easypasswordprompt='认证失败，您的WLAN密码过于简单，为保障您的账号安全，建议您修改为字符与数字组合形式的6位WLAN密码后再登录。';
+</script>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<META HTTP-EQUIV="Pragma" CONTENT="no-cache" />
+		<META HTTP-EQUIV="Expires" CONTENT="0" />
+		<title>Portal Input</title>
+		<link href="http://221.176.1.140:8080/wlan/wap/css/css.css" rel="stylesheet" type="text/css" />
+		<script language="javascript">
+			var httpPath = 'http://221.176.1.140:8080/wlan';
+			var iframRecent = '/wlan/cmcc/info_bj.html';
+		</script>
+		<script language="javascript" src="http://221.176.1.140:8080/wlan/wap/js/jquery.js"></script>
+		<script language="javascript" src="http://221.176.1.140:8080/wlan/wap/js/cmcc_input.js"></script>
+		<script language="javascript" src="http://221.176.1.140:8080/wlan/wap/js/public.js"></script>
+		<script type="text/JavaScript">
+			function MM_jumpMenu(targ,selObj,restore){
+			  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+			  if (restore) selObj.selectedIndex=0;
+			}
+		</script>
+		
+<!--cmcccs|login_req||||http://221.176.1.142:8001/selfmobile/selfwlan_index.ktcl|http://221.176.1.142:8002/wlan/WlanService|http://221.176.1.142:8001/selfmobile/selfwlan_index.ktcl-->
+	</head>
+
+	<body>
+		
+		
+<form name="loginform" action="https://221.176.1.140:8090/wlan/eclient.do" method="post">
+<input  type="hidden" name="wlanacname" value="1144.0010.100.00">
+<input  type="hidden" name="wlanuserip" value="183.244.37.159">
+<input  type="hidden" name="actiontype" value="LOGIN">
+<input  type="hidden" name="logonsessid" value="0">
+<input  type="hidden" name="wlanacssid" value="CMCC">
+<input  type="hidden" name="languagetype" value="">
+<!--
+<input  type="hidden" name="USER" value="">
+ -->
+<input  type="hidden" name="PWD" value="">
+<input  type="hidden" name="pwdtype" value="">
+<input  type="hidden" name="clienttype" value="">
+<input  type="hidden" name="authen" value="">
+<input  type="hidden" name="booktime" value="">
+<input  type="hidden" name="validperiod" value="">
+<input  type="hidden" name="forceflag" value="">
+</form>
+		
+		
+
+
+
+
+<script language="javascript" src="http://221.176.1.140:8080/wlan/wap/js/jquery.js"></script>
+<script language="javascript">
+	var colorId = "null";
+	$(document).ready(function(){
+		if(colorId == 1){
+			$("#ywjsId").addClass('topmenut');
+			}else if(colorId == 2){
+				$("#zxdtId").addClass('topmenut');
+				}else if(colorId == 5){
+					$("#gmsckId").addClass('topmenut');
+					}else if(colorId == 6){
+						$("#khdxzId").addClass('topmenut');
+						}
+		$(".topmenuimg font").click(function(){
+			$(this).addClass('topmenut').siblings('font').removeClass('topmenut');	
+			});
+		});
+</script>
+<div class="top">
+	<div class="toplogo">
+		<img src="http://221.176.1.140:8080/wlan/wap/images/logo.jpg" /> 
+	</div>
+	 <div class="topaddt" align="center"><span  style="color:#0000FF;" ></span></div>
+	<div class="topmenu">
+		<div class="topmenuimg">
+			<font id="ywjsId"><a href="http://221.176.1.140:8080/wlan/wap/cmcc_serviceInfo.jsp?tabid=1&username=&portion=wap&keystr=&wlanacname=1144.0010.100.00&colorId=1" target="_blank">业务介绍</a></font>
+			<span class="topmenuempty">|</span>
+			<font id="zxdtId"><a href="http://221.176.1.140:8080/wlan/wap/cmcc_latest_news.jsp?porvinceid=100&wlanacname=1144.0010.100.00&username=&keystr=&portion=wap&colorId=2" target="_blank">最新动态</a></font>
+			<span class="topmenuempty">|</span>
+			<!-- 去掉了hot图标，并置灰，以后可能会恢复该功能-->
+			<font style="color:#cacaca;">热点查询</font>
+			<!--  
+			<font><a href="http://www.baidu.com&colorId=3" target="_blank">热点查询</a><img src="http://221.176.1.140:8080/wlan/cmcc/images/hot.gif" /></font>
+			-->
+			<span class="topmenuempty">|</span>
+			<font><a href="http://221.176.1.142:8001/selfat/self_index.ktcl?wlanacname=1144.0010.100.00&colorId=4 "  target="_blank" >账户管理</a></font>
+			<span class="topmenuempty">|</span>
+			<font id="gmsckId"><a href="http://221.176.1.140:8080/wlan/verificationCodereFresh.do?flag=durationcard&portion=wap&username=&keystr=&wlanacname=1144.0010.100.00&colorId=5"	target="_blank">购买时长卡</a></font>
+			<span class="topmenuempty">|</span>
+			<font id="khdxzId"><a href="http://221.176.1.140:8080/wlan/wap/cmcc_client_download.jsp?username=&portion=wap&keystr=&wlanacname=1144.0010.100.00&colorId=6" target="_blank">客户端下载</a></font>
+		</div>
+	</div>
+</div>
+
+		<div class="topbg">
+			<div class="topt">
+				<img src="http://221.176.1.140:8080/wlan/wap/images/topbgtl.jpg" height="18"
+					align="absbottom" />
+				400万个
+				<img src="http://221.176.1.140:8080/wlan/wap/images/topbgtr.jpg" height="18"
+					align="absbottom" />
+			</div>
+		</div>
+		<div class="account">
+			<div class="loginbg">
+				<!-- 
+				<div  style="text-align: center; left: 210px;position: absolute;color: #FF9229;font-size: 10pt;font-family: '宋体',Microsoft YaHei,normal;">
+					温馨提示：请时长卡用户将卡密码中的大写字母转换为小写字母后登录
+				</div>
+				 -->
+				<div class="loginleft">
+					<table width="100%"  height="100%" border="0" cellspacing="0" cellpadding="0">
+      					<tr>
+       					 <td>
+					<form id="staticloginid" name="staticlogin" method="post"
+						action="https://221.176.1.140:8090/wlan/login.do">
+						<div>
+							<div class="loginlinput">
+								<div class="loginlt">
+									用户名
+								</div>
+								<div class="linput">
+									<input name="staticusername" type="text" id="staticusernameid"
+										value="移动手机号/时长卡号" class="linputb"  maxlength="30"/>
+								</div>
+							</div>
+							<div class="loginlinput">
+								<div class="loginlt">
+									密 码
+								</div>
+								<div class="linput">
+									<input name="spid" type="text" id="spid" value="输入固定密码/动态密码"
+										class="linputb" />
+									<input name="staticpassword" type="password"
+										id="staticpasswordid" style="display: none" class="linputb" maxlength="30" />
+								</div>
+								<div class="lostpassword">
+									 
+									<a href="javascript:void(0)" id="lostpassword">忘记密码?</a>
+									<!-- 
+									<a href="javascript:void(0)" id="applyautopwd">获取动态密码</a>
+									-->
+								</div>
+							</div>
+							<div class="loginlinput" style="display: none"
+								id="staticcheckcookie">
+								<div class="loginlt">
+									验证码
+								</div>
+								<div class="linputd">
+									<input name="sloginvalidate" type="text" id="staticvalidateid"
+										value="输入验证码" class="linputc"/>
+								</div>
+								<div class="lostimg">
+									<img id="statichiddenvalidateidimg" src="" />
+									<input type="hidden" name="sloginhiddenvalidate"
+										id="statichiddenvalidateid" value="" />
+								</div>
+								<div class="lostnumbernew">
+									<a id="coderefresh3" href="#">点击刷新</a>
+								</div>
+							</div>
+							<div class="loginlinput">
+								<div class="loginlt"></div>
+								<div class="linput">
+									<input name="button" type="button" class="buttonggray"
+										   id="applyautopwd" value="  " style="cursor: pointer"/>
+								</div>
+							</div>
+							<div class="logintout">
+								<div class="loginlt"></div>
+								<div class="logint">
+									<input type="checkbox" name="staticsaveuserinfo"
+										id="staticsaveuserinfoid" value="yes" class="logincheckbox" />
+									每次启动浏览器均自动登录
+								</div>
+								<div class="logintlink">
+									<a href="http://221.176.1.140:8080/wlan/wap/cmcc_serviceInfo.jsp?tabid=4&username=&portion=wap&keystr=&wlanacname=1144.0010.100.00" target="_blank">简介</a>
+								</div>
+							</div>
+							<div class="loginlinput">
+								<div class="loginlt"></div>
+								<div class="linput">
+									<input name="button2" type="submit" class="loginbutton"
+										id="button2" value="登 录" style="cursor: pointer" />
+									<!--  
+									<a href="javascript:void(0)" id="lostpassword">忘记密码?</a>	
+									-->
+								</div>
+							</div>
+						</div>
+						<input name="loginmode" value="static" type="hidden" />
+						<input name="wlanacip" value="117.130.250.54" type="hidden" />
+						<input name="wlanacname" value="1144.0010.100.00" type="hidden" />
+						<input name="wlanuserip" value="183.244.37.159" type="hidden" />
+						<input name="wlanacssid" value="CMCC" type="hidden" />
+						<input name="portion" value="wap" type="hidden" />
+						<input name="uaId" value="" type="hidden" />
+						<input name="obsReturnAccount" value=""
+							type="hidden" />
+						<input name="Token" value="First" type="hidden" />
+					</form>
+					<div class="logintt">
+						国际/港澳台漫游用户登录
+						<br />
+						International Roaming Visitor Login
+						<br />
+						<div>
+							<select name="menu1" class="select" onchange="MM_jumpMenu('top',this,0);" align="left">
+								    <option selected="selected">Select your Service Provider</option>
+								   
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000090310&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- AT&amp;T</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H001005228&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- Beeline</option> 
+									
+									<option value="http://wifiportal.newbridgenet.com/redirect.action?Home_operator=H000998310&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- Boingo</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000199466&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- Globe Mobile</option> 
+									
+									<option value="http://wifiportal.newbridgenet.com/redirect.action?Home_operator=H000999310&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- iPass</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000002450&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- Korea Telecom</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000001208&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- Orange France</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000016454&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- PCCW-HKT mobile service</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000005525&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- StarHUB</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000001219&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- T-Mobile Croatia</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000001262&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- T-Mobile Germany</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000097262&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- T-Home</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000030234&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- T-Mobile UK</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000016204&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- T-Mobile Netherlands</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000001204&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- T-Mobile Czech</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000003232&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- T-Mobile Austria</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000011520&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- True</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000099234&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- Trustive</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000005228&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- WeRoam</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H001001466&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- WIFLY</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000119440&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- WirelessGate</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000099655&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- AlwaysOn</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000012454&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- CMHK</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000001440&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- NTT docomo</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000198440&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- Wi2</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000099454&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- Y5Zone</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000099214&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- GoWex</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000005466&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- APTG</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000003454&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- H3G</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000001466&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- FET</option> 
+									
+									<option value="http://cmccportal.aicent.net/login.php?Home_operator=H000098310&amp;Hotspot_location=beijing&amp;Hotspot_operator=CMCC&amp;Nas_id=1144.0010.100.00&amp;Nas_ip=117.130.250.54&amp;User_ip=183.244.37.159&amp;Portal_ip=221.176.1.140:8080">- Anywayonline</option> 
+									
+							</select>
+						</div>
+					</div>
+					</td>
+      				</tr>
+    			</table>
+				</div>
+				<div class="loginrtop">
+					<img src="http://221.176.1.140:8080/wlan/wap/images/loginimg1.jpg" width="172"
+						height="25" />
+					<br />
+					<a href="http://221.176.1.140:8080/wlan/wap/cmcc_serviceInfo.jsp?tabid=2&username=&portion=wap&wlanacname=1144.0010.100.00" target="_blank">了解详情</a>
+					<br />
+					<!--  
+					<a
+						href="http://221.176.1.140:8080/wlan/wap/autoService.jsp?username=&portion=wap&wlanacname=1144.0010.100.00"
+						target="_blank">中国移动WLAN自动认证</a>
+					<img src="http://221.176.1.140:8080/wlan/wap/images/hot.gif" />
+					<br />
+					-->
+					<label>
+						<input type="button" class="loginbuttonblue"
+							name="button3" id="button3" value="套餐订购 >>" style="cursor: pointer" onclick="javascript:window.open('http://221.176.1.140:8080/wlan/verificationCodereFresh.do?flag=order&portion=wap&wlanacname=1144.0010.100.00')"/>
+						
+					</label>
+				</div>
+				<div class="news">
+	                <span class="news_titile">最新动态</span>
+	                <ul>
+	                <li><a href="http://221.176.1.140:8080/wlan/wap/cmcc_latest_news_detail_roam.jsp?porvinceid=100&portion=wap&wlanacname=1144.0010.100.00&username=&keystr=" target="_blank"">[动态]新推出WLAN国际/港澳台漫游业务</a><img src="http://221.176.1.140:8080/wlan/wap/images/hot.gif"/></li>
+	                <li><a href="http://221.176.1.140:8080/wlan/wap/cmcc_client_download.jsp?username=&portion=wap&keystr=&wlanacname=1144.0010.100.00&colorId=6" target="_blank">[动态]随e行客户端新版发布</a></li>
+	                <li><a href="http://221.176.1.140:8080/wlan/wap/autoService.jsp?username=&portion=wap&wlanacname=1144.0010.100.00" target="_blank">[动态]CMCC-AUTO热点连接说明</a></li>
+	                </ul>
+	            </div>
+			</div>
+		</div>
+		<div class="bottom">
+			<img src="http://221.176.1.140:8080/wlan/wap/images/loginbottom.jpg" />
+		</div>
+		<div class="copyright">
+			<p>
+				京ICP备0500888号&nbsp;中国移动通信版权所有
+			</p>
+		</div>
+
+	</body>
+</html>

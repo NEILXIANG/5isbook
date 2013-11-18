@@ -1,0 +1,36 @@
+/*  Pager extend */
+.paginations, .paginations li.hover, .paginations li.hover a, .paginations li span,
+.paginations li.disabled span span,
+.paginations li.jumpto, .paginations li.jumpto .goto { background:url(themes/default/images/grid/grid.png) no-repeat;}
+
+.paginations { float:right; padding-left:7px; background-position:0 -199px;}
+.paginations li, .pagination li.hover { padding:0 0 0 5px; background-position:0 -100px;}
+.paginations a, .pagination li.hover a, .pagination li span { float:left; display:block; padding:0 5px 0 0; text-decoration:none; line-height:23px; background-position:100% -150px;}
+.paginations li.selected a{color:red; font-weight:bold;}
+.paginations span, .pagination li.hover span { float:left; display:block; height:23px; line-height:23px; cursor:pointer;}
+
+.paginations li .first span, .panelBar li .previous span { padding:0 0 0 10px;}
+.paginations li .next span, .panelBar li .last span { padding:0 10px 0 0;}
+.paginations li .first span { background-position:0 -244px;}
+.paginations li .previous span { background-position:0 -294px;}
+.paginations li .next span { background-position:100% -344px;}
+.paginations li .last span { background-position:100% -394px;}
+.paginations li .last { margin-right:5px;}
+
+.paginations li.disabled { background:none;}
+.paginations li.disabled span, .grid .pagination li.disabled a { background-position:0 100px; cursor:default;}
+.paginations li.disabled span span { color:#666;}
+.paginations li.disabled .first span { background-position:0 -444px;}
+.paginations li.disabled .previous span { background-position:0 -494px;}
+.paginations li.disabled .next span { background-position:100% -544px;}
+.paginations li.disabled .last span { background-position:100% -594px;}
+.paginations li.disabled .last { margin-right:5px;}
+
+.paginations li.jumpto { padding:2px 2px 0 7px; background-position:0 -200px;}
+.paginations li.jumpto .textInput { float:left; width:30px; padding:1px; border-color:#acaeaf;}
+.paginations li.jumpto .goto { float:left; display:block; overflow:hidden; width:16px; height:19px; border:0; text-indent:-1000px; background-position:0 -650px; cursor:pointer;}
+
+a.btnSearch{background:url(themes/default/images/button/imgX.gif) no-repeat; display:block; width:22px; height:20px; text-indent:-1000px; overflow:hidden; float:left; margin-right: 3px}
+a.btnSearch{background-position: -161px 0;}
+.center a.btnSearch{display:inline-block;float:none}
+.right a.btnSearch{display:inline-block;float:none;text-indent:1000px}

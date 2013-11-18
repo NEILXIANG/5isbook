@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!-- 显示系统信息 -->
+	<package name="nodeinfo" namespace="/nodeinfo" extends="defaultPackage">
+		<default-action-ref name="nodes"></default-action-ref>
+		<!-- 显示系统在红所有的叶子节点 -->
+		<action name="nodes" class="com.wisbook.action.configuration.showEndNodes">
+			<result name="success">/systeminfo/nodes.jsp</result>
+		</action>
+	</package> 
+</struts>
+	

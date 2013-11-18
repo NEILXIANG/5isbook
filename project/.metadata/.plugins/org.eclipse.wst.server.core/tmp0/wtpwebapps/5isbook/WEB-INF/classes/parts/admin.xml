@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!-- <constant name="struts.i18n.encoding" value="GBK"></constant> -->
+
+	<!-- 用户个人中心，展示用户详细资料，需要管理员权限 -->
+	<package name="/admin/user/detail" namespace="/admin/user/detail"
+		extends="defaultPackage">
+		<action name="*" class="userDetail" method="{1}">
+			<result name="adminDetailInfo">/admin/user/detail/adminUserInfo.jsp</result>
+			<result name="commontUserDetailInfo">/admin/user/detail/commonUserInfo.jsp</result>
+			<result name="loginInfo">/admin/user/detail/loginInfo.jsp</result>
+		</action>
+	</package>
+
+	<!-- 当前登录的管理员更改自己密码,超级管理员注册新管理员 -->
+	<package name="/admin" namespace="/admin" extends="defaultPackage">
+		<default-action-ref name="index"/>
+		<action name="index" class="com.wisbook.action.admin.indexAction">
+			<result name="success">/admin/index.jsp</result>
+		</action>
+		<action name="changePsw" class="changePassword">
+			<result name="input">/admin/user/changePassword.jsp</result>
+			<result name="success">/admin/user/changePassword.jsp?message=${message}
+			</result>
+		</action>
+		<action name="addAdmin" class="addAdminUser">
+			<result name="input">/admin/user/addAdmin.jsp</result>
+			<result name="success">/admin/user/addAdmin.jsp?message=${message}
+			</result>
+		</action>
+	</package>
+
+
+	<!-- 所有用户的列表，激活/屏蔽用户， 需要管理员权限 -->
+	<package name="/admin/user" namespace="/admin/user" extends="defaultPackage">
+		<action name="*" class="adminUser" method="{1}">
+			<result name="success">/admin/user/all.jsp</result>
+			<result name="myInfo" type="redirect">/admin/user/myUserInfo.jsp
+			</result>
+		</action>
+	</package>
+
+	<!-- 后台商品管理 -->
+	<package name="/admin/goods" namespace="/admin/goods" extends="struts-default">
+		<!-- 增加商品 -->
+		<action name="add" class="addGoods">
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">
+					application/vnd.ms-excel
+				</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+			<result name="input">/admin/goods/add.jsp</result>
+			<result name="success">/admin/goods/upload.jsp</result>
+		</action>
+		<!-- 商品搜索 -->
+		<action name="search" class="searchGoods">
+			<result name="success">/admin/goods/searchResult.jsp</result>
+		</action>
+
+		<!-- 商品详情 -->
+		<action name="info_*" class="goodsDetail" method="{1}">
+			<result name="detail">/admin/goods/detail.jsp</result>
+			<result name="edit">/admin/goods/edit.jsp</result>
+		</action>
+		<!-- 展示所有商品 -->
+		<action name="allCategory" class="adminShowCategory">
+			<result name="success">/admin/goods/all.jsp</result>
+			<result name="error">/error/error2.jsp</result>
+		</action>
+		<!-- 商品管理，增减 -->
+		<action name="*" class="adminGoods" method="{1}">
+			<result name="success">/admin/goods/all.jsp</result>
+			<result name="error">/error/error2.jsp</result>
+		</action>
+	</package>
+
+	<!-- 后台订单管理 -->
+	<package name="/admin/order" namespace="/admin/order" extends="struts-default">
+		<action name="*" class="adminOrder" method="{1}">
+			<result name="success">/admin/order/all.jsp</result>
+			<result name="state">/admin/order/state.jsp</result>
+			<result name="userOrders">/admin/order/userOrders.jsp</result>
+			<result name="detail">/admin/order/detail.jsp</result>
+		</action>
+	</package>
+</struts>
+	

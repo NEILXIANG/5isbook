@@ -1,0 +1,182 @@
+!SESSION 2013-07-04 22:47:58.842 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_26
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.jee.product
+
+This is a continuation of log file /data/_Mspace/pros/bookshop/5isbook/src/.metadata/.bak_0.log
+Created Time: 2013-07-04 22:51:46.829
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:46.829
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.editor. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:46.833
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.editor. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:47.138
+!MESSAGE There should only ever be one match for a constructor search but found 3 when looking for t. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:48.298
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.command. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:48.657
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.dialog. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:49.436
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for History. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:49.442
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for History. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:49.557
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.command. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:49.851
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.dialog. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:50.335
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.command. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:50.548
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.dialog. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:50.765
+!MESSAGE There should only ever be one match for a constructor search but found 3 when looking for a.editor. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:50.766
+!MESSAGE There should only ever be one match for a constructor search but found 3 when looking for a.editor. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:50.771
+!MESSAGE There should only ever be one match for a constructor search but found 3 when looking for a.editor. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:50.772
+!MESSAGE There should only ever be one match for a constructor search but found 3 when looking for a.editor. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:50.815
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.command. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:50.845
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.command. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:51.024
+!MESSAGE There should only ever be one match for a constructor search but found 4 when looking for t. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-04 22:51:51.090
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.dialog. Using the first match.
+
+!ENTRY org.eclipse.jdt.core 4 4 2013-07-04 22:51:51.597
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: 5isbook
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:793)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: org.apache.subversion.javahl.ClientException: svn: E155004: Working copy '/data/_Mspace/pros/bookshop/5isbook/src/5isbook/build/classes' locked
+svn: E155004: '/data/_Mspace/pros/bookshop/5isbook/src/5isbook' is already locked.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2013-07-04 22:51:51.597
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2013-07-04 22:51:51.597
+!MESSAGE org.apache.subversion.javahl.ClientException: svn: E155004: Working copy '/data/_Mspace/pros/bookshop/5isbook/src/5isbook/build/classes' locked
+svn: E155004: '/data/_Mspace/pros/bookshop/5isbook/src/5isbook' is already locked.
+
+!ENTRY org.eclipse.jdt.core 4 4 2013-07-04 22:56:21.132
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: 5isbook
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:793)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:178)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: org.apache.subversion.javahl.ClientException: svn: E155004: Working copy '/data/_Mspace/pros/bookshop/5isbook/src/5isbook/build/classes' locked
+svn: E155004: '/data/_Mspace/pros/bookshop/5isbook/src/5isbook' is already locked.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2013-07-04 22:56:21.133
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.tigris.subversion.subclipse.core 4 -6 2013-07-04 22:56:21.133
+!MESSAGE org.apache.subversion.javahl.ClientException: svn: E155004: Working copy '/data/_Mspace/pros/bookshop/5isbook/src/5isbook/build/classes' locked
+svn: E155004: '/data/_Mspace/pros/bookshop/5isbook/src/5isbook' is already locked.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:22.586
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.editor. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:22.624
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.editor. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:22.921
+!MESSAGE There should only ever be one match for a constructor search but found 3 when looking for t. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:24.095
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.command. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:24.473
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.dialog. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:25.194
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for History. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:25.203
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for History. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:26.288
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.command. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:26.667
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.dialog. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:27.180
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.command. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:27.446
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.dialog. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:27.702
+!MESSAGE There should only ever be one match for a constructor search but found 3 when looking for a.editor. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:27.706
+!MESSAGE There should only ever be one match for a constructor search but found 3 when looking for a.editor. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:27.721
+!MESSAGE There should only ever be one match for a constructor search but found 3 when looking for a.editor. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:27.726
+!MESSAGE There should only ever be one match for a constructor search but found 3 when looking for a.editor. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:27.750
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.command. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:27.786
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.command. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:27.984
+!MESSAGE There should only ever be one match for a constructor search but found 4 when looking for t. Using the first match.
+
+!ENTRY org.eclipse.wst.jsdt.core 2 2 2013-07-05 01:10:28.056
+!MESSAGE There should only ever be one match for a constructor search but found 2 when looking for a.dialog. Using the first match.

@@ -1,0 +1,9 @@
+.tableform {border-collapse: collapse;border-spacing: 2px;margin:5px 5px 5px 5px;}
+.tableform thead {display: table-header-group;vertical-align: middle;border-color: inherit;}
+.tableform th{border: 1px solid #C7D8EA;background:#EAF0F7;font-weight: 700;height: 25px;padding:2px 2px 2px 2px;}
+.tableform td{border: 1px solid #C7D8EA;height: 25px;padding:2px 2px 2px 2px;}
+.treegrid_folder_open{background:url("../img/zTreeStandard.png") no-repeat  -92px 2px transparent;;cursor:pointer; display:inline-block;height: 18px;width: 18px;}
+.treegrid_folder_close{background:url("../img/zTreeStandard.png") no-repeat  -74px 2px transparent;;cursor:pointer; display:inline-block;height: 18px;width: 18px;}
+.treegrid_leaf{background:url("../img/zTreeStandard.png")}
+.treegrid_noline{height: 18px;width: 18px;display:inline-block;}
+
